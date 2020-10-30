@@ -1,0 +1,79 @@
+<!-- <ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="primary">
+      <ion-button (click)="dismissPin()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content class="ion-padding">
+
+  <h6 class="ion-text-center ion-margin-vertical">{{ pagetitle }}</h6>
+  <div class="ion-text-center ion-margin-vertical">
+    <ion-icon [name]="pin.length>0 ? 'radio-button-on' : 'radio-button-off'"></ion-icon>
+    <ion-icon [name]="pin.length>1 ? 'radio-button-on' : 'radio-button-off'"></ion-icon>
+    <ion-icon [name]="pin.length>2 ? 'radio-button-on' : 'radio-button-off'"></ion-icon>
+    <ion-icon [name]="pin.length>3 ? 'radio-button-on' : 'radio-button-off'"></ion-icon>
+    <ion-icon [name]="pin.length>4 ? 'radio-button-on' : 'radio-button-off'"></ion-icon>
+    <ion-icon [name]="pin.length>5 ? 'radio-button-on' : 'radio-button-off'"></ion-icon>
+  </div>
+  <div class="ion-text-center">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="handleInput('1')" fill="outline" shape="round" size="large">1</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="handleInput('2')" fill="outline" shape="round" size="large">2</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="handleInput('3')" fill="outline" shape="round" size="large">3</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="handleInput('4')" fill="outline" shape="round" size="large">4</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="handleInput('5')" fill="outline" shape="round" size="large">5</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="handleInput('6')" fill="outline" shape="round" size="large">6</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="handleInput('7')" fill="outline" shape="round" size="large">7</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="handleInput('8')" fill="outline" shape="round" size="large">8</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="handleInput('9')" fill="outline" shape="round" size="large">9</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="handleInput('0')" fill="outline" shape="round" size="large">0</ion-button>
+        </ion-col>
+        <ion-col>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="handleInput('clear')" fill="clear" size="large" class="ion-no-padding">Clear
+          </ion-button>
+        </ion-col>
+        <ion-col>
+        </ion-col>
+        <ion-col>
+          <ion-button (click)="emitEvent('clear')" fill="clear" size="large">OK</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
